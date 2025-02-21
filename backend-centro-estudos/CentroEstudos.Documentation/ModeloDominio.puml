@@ -1,0 +1,89 @@
+@startuml
+
+class User {
+    username
+    password
+    roles
+}
+
+class StudyCenter{
+    name
+    nif
+}
+
+class Manager{
+    name
+    nif
+    email
+    contact
+}
+
+class Student {
+    name
+    nif
+    email
+    contact
+    parentsContact
+}
+
+class Teacher{
+    name
+    nif
+    email
+    contact
+}
+
+class Schedule{
+    explanations
+}
+
+class Discipline{
+    name
+    SchoolYear
+}
+
+class SchoolYear{
+    year
+}
+
+class Explanation{
+    startDate
+    endDate
+    Discipline
+    summary
+}
+
+class Meeting{
+    startDate
+    endDate
+    name
+    description
+}
+
+class Expenses{
+    date
+    name
+    description
+}
+
+StudyCenter -- User
+
+User --|> Teacher
+User --|> Student
+User --|> Manager
+
+
+Manager --> Schedule
+Student --> Schedule 
+Teacher --> Schedule
+
+Schedule --> Explanation
+Schedule --> Meeting
+
+
+Explanation --> Discipline
+Explanation --> SchoolYear
+
+Manager --> Expenses
+
+@enduml
