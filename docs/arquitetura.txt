@@ -1,0 +1,37 @@
+StudyFlow/
+├── app/                          # Código Remix (frontend + backend)
+│   ├── components/               # Componentes React reutilizáveis
+│   ├── routes/                   # Rotas públicas e privadas (UI + Loaders/Actions)
+│   │   ├── index.tsx             # Página inicial
+│   │   ├── login.tsx             # Página de login
+│   │   ├── dashboard.tsx         # Painel administrativo
+│   ├── services/                 # Lógica de negócio (domínio)
+│   │   ├── userService.ts        # Ex: gestão de utilizadores
+│   │   ├── lessonService.ts      # Ex: agendamento de aulas
+│   ├── lib/                      # Helpers, SDKs externos
+│   │   ├── prisma.server.ts      # Cliente Prisma
+│   │   ├── firebase.server.ts    # Configuração Firebase
+│   │   ├── aws.server.ts         # Configuração AWS S3
+│   ├── middleware/               # Middleware para autenticação e multi-tenant
+│   │   └── requireUserSession.ts
+│   ├── types/                    # Tipos e DTOs (opcional)
+│   └── tailwind.css              # Estilos principais
+│
+├── prisma/                       # ORM Prisma
+│   ├── schema.prisma             # Modelo da base de dados
+│   └── migrations/               # Migrações automáticas
+│
+├── public/                       # Assets públicos (imagens, favicon, etc.)
+│
+├── scripts/                      # Scripts utilitários
+│   └── seed.ts                   # População de dados de teste
+│
+├── tests/                        # Testes unitários e e2e (opcional)
+│
+├── .env                          # Variáveis de ambiente locais
+├── .gitignore
+├── fly.toml                      # Configuração do Fly.io
+├── package.json                  # Dependências npm
+├── tailwind.config.js            # Configuração Tailwind
+├── tsconfig.json                 # Configuração TypeScript
+└── README.md                     # Documentação do projecto
