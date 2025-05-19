@@ -15,6 +15,7 @@
   - Para professores e alunos, com sobreposição detectada
   - Marcação de explicações
 - 📁 **Gestão de aulas**:
+  - Registo e gestão de presenças
   - Criação de sumários e conteúdos
   - Upload de ficheiros (via AWS S3)
 - 🔐 **Autenticação via Firebase**:
