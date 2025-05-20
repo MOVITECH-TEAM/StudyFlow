@@ -51,7 +51,7 @@ export default function Login() {
         </div>
 
         <h1 className="text-xl font-bold text-white mb-6 text-center">
-          Sign in to your account
+          Study Center Management Software
         </h1>
 
         {error && <p className="text-sm text-red-500 text-center">{error}</p>}
